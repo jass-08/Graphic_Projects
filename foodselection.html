@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link type="text/css" rel="stylesheet" href="fs-style.css"/>
+ 	<title>Skip The Bowls</title>
+
+ </head>
+
+ <body>
+
+ 	<div id="food-selection">
+ 	<div id="fs-page-info">
+ 		<ul>
+ 		 	<li><a href="RestPage.html">Home</a></li>
+ 		 	
+ 		 	<li><a href="contact.html">Contact</a></li>
+ 	
+ 		 	<li style="float:right"><a href="index2.htm">Account</a></li>
+ 		 	
+ 		</ul>
+
+ 	</div>
+ 	
+
+ 	<div class="bg"><img src="images/fs-bg.jpg"/ class="bg"></div>
+
+
+
+ 	<div id="fs-topbar">
+ 		<table>
+ 			<tbody>
+ 				<tr style="line-height: 20px;">
+	 				<td class="fs-infobar">
+	 					<div id="fs-infobar-dropdown" >
+	 						<p id="fs-address">123 Pembina Hwy&darr;</p> 
+	 						<div id="fs-dropdown-content">
+    							<p onclick="changeAddress(Event)">10 Bison Dr</p>
+    							<p onclick="changeAddress(Event)">200 St.Mary's Rd</p>
+    							<p onclick="changeAddress(Event)">98 Main St</p>
+  							</div>
+  						</div>
+  					<td>
+	 				<td class="fs-infobar"><div id="fs-fee">Delivery Fee: $2</div></td>
+	 				<td class="fs-infobar"><div id="fs-time">Delivery Time: 25 Minutes</div><td>
+	 				<td class="fs-infobar"><div id="fs-rating">Rating: 9.8</div><td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+ 	</div>
+
+ 	
+
+
+ 	<div id="fs-sidebar">
+ 		<a href="#fs-burgers">Burgers</a>
+ 		<a href="#fs-drinks">Drinks</a>
+  		<a href="#fs-sides">Sides</a>
+ 		
+ 	</div>
+
+ 	<div id="fs-sidebar-spaceholder">
+ 		<p>test</p>
+ 	</div>
+
+
+
+ 	<div id="fs-select">
+ 		
+ 		
+ 		<div class="fs-category-link" id="fs-burgers">Burgers</div>
+ 		<div class="fs-category">Burgers</div>
+
+	 	<div class="fs-entry" onmouseover="popup('images/Bigmac.jpg')" onmouseout="popup('images/Bigmac.jpg')">
+	 		<img class="fs-pic" src="images/Bigmac.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Big Mac...........8.99</p>
+	 				<button onclick="removeItem('Big Mac', 8.99);finalRemoveItem('Big Mac',8.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Big Mac', 8.99);finalAddItem('Big Mac', 8.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/fs-quarter.jpg')" onmouseout="popup('images/fs-quarter.jpg')">
+	 		<img class="fs-pic" src="images/fs-quarter.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Quarter Pounder.......7.99</p>
+	 				<button onclick="removeItem('Quarter Pounder', 7.99);finalRemoveItem('Quarter Pounder',7.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Quarter Pounder', 7.99);finalAddItem('Quarter Pounder', 7.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/fs-mcdouble.jpg')" onmouseout="popup('images/fs-mcdouble.jpg')"> 
+	 		<img class="fs-pic" src="images/fs-mcdouble.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">McDouble...........1.99</p>
+	 				<button onclick="removeItem('McDouble', 1.99);finalRemoveItem('McDouble',1.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('McDouble', 1.99);finalAddItem('McDouble', 1.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/fs-jr-chicken.jpg')" onmouseout="popup('images/fs-jr-chicken.jpg')">
+	 		<img class="fs-pic" src="images/fs-jr-chicken.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Junior Chicken...........1.99</p>
+	 				<button onclick="removeItem('Junior Chicken', 1.99);finalRemoveItem('Junior Chicken',1.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Junior Chicken', 1.99);finalAddItem('Junior Chicken', 1.99)">+</button>
+	 			</div>
+	 	</div>	
+	 	<div class="fs-entry" onmouseover="popup('images/fs-plt.jpg')" onmouseout="popup('images/fs-plt.jpg')">
+	 		<img class="fs-pic" src="images/fs-plt.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">P.L.T...........6.99</p>
+	 				<button onclick="removeItem('P.L.T.', 6.99);finalRemoveItem('P.L.T.',6.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('P.L.T.', 6.99);finalAddItem('P.L.T.', 6.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/fs-chicken.png')" onmouseout="popup('images/fs-chicken.png')">
+	 		<img class="fs-pic" src="images/fs-chicken.png" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Chicken Burger.........5.99</p>
+	 				<button onclick="removeItem('Chicken Burger', 5.99);finalRemoveItem('Chicken Burger',5.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Chicken Burger', 5.99);finalAddItem('Chicken Burger', 5.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/fs-bacon.jpg')" onmouseout="popup('images/fs-bacon.jpg')">
+	 		<img class="fs-pic" src="images/fs-bacon.jpg" alt=""/>
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Bacon Cheese Burger...........10.99</p>
+	 				<button onclick="removeItem('Bacon Cheese Burger', 10.99);finalRemoveItem('Bacon Cheese Burger', 10.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Bacon Cheese Burger', 10.99);finalAddItem('Bacon Cheese Burger', 10.99)">+</button>
+	 			</div>
+	 	</div>	
+	 	<div class="fs-entry" onmouseover="popup('images/Bigmac.jpg')" onmouseout="popup('images/Bigmac.jpg')">
+	 		<img class="fs-pic" src="images/Bigmac.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Big Mac...........8.99</p>
+	 				<button onclick="removeItem('Big Mac', 8.99);finalRemoveItem('Big Mac',8.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Big Mac', 8.99);finalAddItem('Big Mac', 8.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/Bigmac.jpg')" onmouseout="popup('images/Bigmac.jpg')">
+	 		<img class="fs-pic" src="images/Bigmac.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Big Mac...........8.99</p>
+	 				<button onclick="removeItem('Big Mac', 8.99);finalRemoveItem('Big Mac',8.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Big Mac', 8.99);finalAddItem('Big Mac', 8.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/Bigmac.jpg')" onmouseout="popup('images/Bigmac.jpg')">
+	 		<img class="fs-pic" src="images/Bigmac.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Big Mac...........8.99</p>
+	 				<button onclick="removeItem('Big Mac', 8.99);finalRemoveItem('Big Mac',8.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Big Mac', 8.99);finalAddItem('Big Mac', 8.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/Bigmac.jpg')" onmouseout="popup('images/Bigmac.jpg')">
+	 		<img class="fs-pic" src="images/Bigmac.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Big Mac...........8.99</p>
+	 				<button onclick="removeItem('Big Mac', 8.99);finalRemoveItem('Big Mac',8.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Big Mac', 8.99);finalAddItem('Big Mac', 8.99)">+</button>
+	 			</div>
+	 	</div>
+
+
+	 	
+ 		<div class="fs-category-link" id="fs-drinks">Drinks</div>
+ 		<div class="fs-category">Drinks</div>
+
+ 		<div class="fs-entry"  onmouseover="popup('images/DrinkCoke.jpg')" onmouseout="popup('images/DrinkCoke.jpg')">
+	 		<img class="fs-pic" src="images/DrinkCoke.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Coke.....1.99</p>
+	 				<button onclick="removeItem('Coke', 1.99);finalRemoveItem('Coke',1.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Coke', 1.99);finalAddItem('Coke', 1.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/DrinkSprite.jpg')" onmouseout="popup('images/DrinkSprite.jpg')">
+	 		<img class="fs-pic" src="images/DrinkSprite.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Sprite......1.99</p>
+	 				<button onclick="removeItem('Sprite', 1.99);finalRemoveItem('Sprite',1.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Sprite', 1.99);finalAddItem('Sprite',1.99)">+</button>
+	 			</div>
+	 	</div>
+
+	 	<div class="fs-entry" onmouseover="popup('images/DrinkPepper.jpg')" onmouseout="popup('images/DrinkPepper.jpg')">
+	 		<img class="fs-pic" src="images/DrinkPepper.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Dr.Pepper........1.99</p>
+	 				<button onclick="removeItem('Dr.Pepper', 1.99);finalRemoveItem('Dr.Pepper',1.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Dr.Pepper', 1.99);finalAddItem('Dr.Pepper',1.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/DrinkShake.jpg')" onmouseout="popup('images/DrinkShake.jpg')">
+	 		<img class="fs-pic" src="images/DrinkShake.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">MilkShake.......2.49</p>
+	 				<button onclick="removeItem('MilkShake', 2.99);finalRemoveItem('MilkShake',2.49)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('MilkShake', 2.99);finalAddItem('MilkShake',2.49)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/DrinkCoffee.jpg')" onmouseout="popup('images/DrinkCoffee.jpg')">
+	 		<img class="fs-pic" src="images/DrinkCoffee.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Coffee.......0.99</p>
+	 				<button onclick="removeItem('Coffee', 0.99);finalRemoveItem('Coffee',0.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Coffee', 0.99);finalAddItem('Coffee',0.99)">+</button>
+	 			</div>
+	 	</div>
+	 	
+	 	<div class="fs-category-link" id="fs-sides">Sides</div>
+ 		<div class="fs-category">Sides</div>
+
+ 		<div class="fs-entry" onmouseover="popup('images/fs-fries.jpg')" onmouseout="popup('images/fs-fries.jpg')">
+	 		<img class="fs-pic" src="images/fs-fries.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Friess.....1.99</p>
+	 				<button onclick="removeItem('Fries', 1.99);finalRemoveItem('Fries',1.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Fries', 1.99);finalAddItem('Fries',1.99)">+</button>
+	 			</div>
+	 	</div>
+	 	<div class="fs-entry" onmouseover="popup('images/fs-poutine.jpg')" onmouseout="popup('images/fs-poutine.jpg')">
+	 		<img class="fs-pic" src="images/fs-poutine.jpg" alt="" />
+	 			<div class="fs-item-bot">
+	 				<p class="fs-name">Poutine......3.99</p>
+	 				<button onclick="removeItem('Poutine', 3.99);finalRemoveItem('Poutine',3.99)"> - </button>
+	 				<button class="fs-count"> 0 </button>
+	 				<button onclick="addItem('Poutine', 3.99);finalAddItem('Poutine',3.99)">+</button>
+	 			</div>
+	 	</div>
+
+
+	 				
+
+ 	
+ 	<div id="fs-cart-bar">
+ 		<img src="images/cart test.png" style="width: 80%; border: 1px solid black">
+
+ 	</div>
+
+ 	<div id="fs-cart-menu">
+ 		
+ 		<h2><button id="fs-close-menu" onclick="cartClose()">X</button>Your Cart</h2>
+ 		
+ 		<h3 id="fs-cart-total"><span id="fs-cart-amount">Sub-Total: 0.00</span> <button id="fs-checkout-button" onclick="toCheckout()">CHECKOUT</button></h3>
+
+ 		
+ 	</div>
+
+ </div>
+
+ </div>
+
+ <div id="checkout">
+ 	<div class="bg"><img src="images/fs-bg.jpg"/ class="bg"></div>
+ 	<br>
+ 	<div id="fs-page-info2">
+ 		<ul style="top:0;">
+ 		 	<li><a href="RestPage.html">Home</a></li>
+ 		 	
+ 		 	<li><a href="#contact">Contact</a></li>
+ 	
+ 		 	<li style="float:right"><a href="index2.htm">Account</a></li>
+ 		 	
+ 		</ul>
+
+ 	</div>
+ 	<br><br>
+ 	 <form id="rcorners3", style="float:left;margin-bottom: 3%;">
+ 	  <p style="font-size:150%;">Payment Info</p><br>
+ 	  <label for="C#">Card Number</label><br>
+ 	  <input type="text" id="C#" name="C#"><br>
+ 	  <label for="name#">Name on Card</label><br>
+ 	  <input type="text" id="name#" name="name#"><br>
+ 	  <label for="exp#">Expiry Date</label><br>
+ 	  <input type="text" id="exp#" name="exp#"><br><br>
+ 	  <label for="ccv">CCV</label><br>
+ 	  <input type="text" id="ccv" name="ccv"><br><br>
+ 	 </form>
+
+ 	  <form id="rcorners2", style="float:right;" action="final.html">
+ 	  	<div id="final-cart" style="height: 100%">
+ 	  		<p style="font-size:150%"> Checkout </p><br>
+ 	  		<p id="final-cart-amount"></p>
+ 	  	</div>
+ 	  	<br>
+ 	  	<br>
+ 	  <label for="tip">TIP</label><br>
+ 	  <input type="text" id="tip" name="tip"><br><br>
+ 	  <input type="submit" value="Submit">
+
+ 	 </form>
+ 	  <form id="rcorners3", style="float:left;">
+ 	  <p style="font-size:150%;"> Your Delivery </p><br><br>
+ 	  <li id="rcorner3", style="float:left;">List of all delivery Updates and Info:</li><br><br>
+ 	  <label for="Special Instruction">Special Instruction</label><br>
+ 	  <input type="text" id="Special Instruction" name="Special Instruction"><br><br>
+ 	 
+ 	 </form>
+ </div>
+
+
+ 	<script src="fs-code.js"></script>
+ </body>
+
+
+</html>

@@ -1,0 +1,3 @@
+-open startup page, site should link to each other page properly from there.
+-search bar on rest page last certain limitations, but should respond quickly enough for marker to see it work. Example to try is 
+coffee or KFC
